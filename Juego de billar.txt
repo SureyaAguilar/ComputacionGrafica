@@ -1,0 +1,168 @@
+//librerias
+#include "colors.inc"    
+
+//camara y posicion
+camera {
+location <0,30,0>
+look_at <0,1,0>
+        }          
+        
+        //fuente de luz 
+light_source { 
+<0,20,0> 
+color red 1 green 1 blue 1}    
+
+
+//planos a nuestra escena 
+plane{
+<0,1,0> 0
+texture {
+pigment {color red 1 green 1 blue 1}
+}
+}
+
+
+union {
+   
+sphere {<0,0,6>,1
+texture {
+pigment {color Yellow}
+finish {phong 4}
+}              
+}   
+   
+   
+sphere {<1,0,4>,1
+texture {
+pigment {color red 1}
+finish {phong 4}
+}              
+}                
+
+sphere {<-1,0,4>,1
+texture {
+pigment {color Blue}
+finish {phong 4}
+}              
+}
+        
+sphere {<-2,0,2>,1
+texture {
+pigment {color Blue}
+finish {phong 4}
+}              
+}
+ 
+sphere {<-2,0,2>,1
+texture {
+pigment {color Blue}
+finish {phong 4}
+}              
+}  
+
+sphere {<0,0,2>,1
+texture {
+pigment {color Orange}
+finish {phong 4}
+}              
+}
+
+sphere {<2,0,2>,1
+texture {
+pigment {color red 0.3 green 1}
+finish {phong 4}
+}              
+}
+
+sphere {<-3,0,0>,1
+texture {
+pigment {color Brown}
+finish {phong 4}
+}              
+}     
+
+sphere {<-3,0,0>,1
+texture {
+pigment {color Brown}
+finish {phong 4}
+}              
+}
+sphere {<-1,0,0>,1
+texture {
+pigment {color Black}
+finish {phong 4}
+}              
+}
+sphere {<1,0,0>,1
+texture {
+pigment {color red 1 green 1}
+finish {phong 4}
+}              
+}     
+
+// conlinea    azul
+sphere {<3,0,0>,1
+texture{
+pigment {checker White Blue}
+finish{phong 4}
+}          
+}                  
+   // linea roja                
+sphere {<-4,0,-2>,1
+texture {
+pigment {checker White Red}
+finish {phong 4}
+}              
+}
+       // linea azul 
+sphere {<-2,0,-2>,1
+texture {
+pigment {checker White Blue} 
+finish {phong 4}
+}              
+}
+        //linea amarilla 
+sphere {<0,0,-2>,1
+texture {
+pigment {checker White Yellow}
+finish {phong 4}
+}              
+}  
+// linea verde                       
+sphere {<2,0,-2>,1
+texture {
+pigment {checker White Green}
+finish {phong 4}
+}              
+}       
+// linea chocolate
+sphere {<4,0,-2>,1
+texture {
+pigment {checker White Brown}
+finish {phong 4}
+}              
+}
+    //palo
+cylinder{
+<-10,1,10>, <-5,1,-8> 0.3
+         texture{ // ----------------------------------------   
+            pigment{ wood turbulence 0.02 octaves 4 lambda 3
+                     scale 0.175  rotate <2, 3, 0> 
+                     color_map {
+                        [0.0 color rgb <1.00, 0.88, 0.54>]
+                        [0.1 color rgb <1.00, 0.80, 0.54>]
+                        [0.5 color rgb <0.70, 0.42, 0.23>]
+                        [0.7 color rgb <0.70, 0.42, 0.23>]
+                        [1.0 color rgb <1.00, 0.88, 0.54>]
+                     }// end of color_map
+                   } // end of pigment
+            // normal { agate 0.5 scale 0.25} 
+            finish { phong 1 } 
+            rotate <0,0, 0>  scale 1  translate <0,0,0>
+        } // end of texture ---------------------------------
+
+
+}
+}         
+
+
